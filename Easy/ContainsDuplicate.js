@@ -9,15 +9,22 @@
 
 // Solution:
 
+/**
+ * We create an empty array, then we loop through the input array and check if the empty array contains
+ * the current element. If it does, we return true. If it doesn't, we add the current element to the
+ * empty array. If we finish looping through the input array, we return false
+ * @param nums - an array of integers
+ * @returns A boolean value.
+ */
+
 const containsDuplicate = (nums) => {
   let number = []
 
   for (let i = 0; i < nums.length; i++) {
     if (number.includes(nums[i])) {
       return true
-    } else {
-      number.push(nums[i])
     }
+    number.push(nums[i])
   }
 
   return false
