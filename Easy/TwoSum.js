@@ -1,20 +1,20 @@
 var twoSum = function (nums, target) {
-    let number = []
+  let number = []
 
-    for (var i = 0; i < nums.length; i++) {
-        for (var j = i + 1; j < nums.length; j++) {
-            if (nums[i] + nums[j] === target) {
-                number.push(i, j)
+  for (var i = 0; i < nums.length; i++) {
+    for (var j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        number.push(i, j)
 
-                return number
-            }
-        }
+        return number
+      }
     }
+  }
 
-    return number
+  return number
 }
 
-console.log(twoSum());
+console.log(twoSum())
 
 // Constraints
 // 2 <= nums.length <= 104
