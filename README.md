@@ -1,6 +1,8 @@
 # Leetcode Questions
 
-## Array and Hashing
+## 1.) Easy
+
+### Array and Hashing
 
 - Contains Duplicate
 - Two Sum
