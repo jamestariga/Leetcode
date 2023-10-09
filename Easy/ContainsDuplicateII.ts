@@ -14,10 +14,6 @@ const k = 3
 
 console.log(containsNearbyDuplicate(nums, k))
 
-const set = new Set([1, 2, 3, 1])
-
-console.log(set.size)
-
 // Approach
 // The solution uses a sliding window approach to keep track of the elements within a distance of k from the current element. The sliding window is implemented using a Set data structure, which allows us to efficiently check if an element is already in the window.
 
