@@ -98,18 +98,19 @@ const numIslands = (grid: string[][]): number => {
 
         // Check if the neighbor is within bounds, is land, and not visited
         if (
-          newR >= 0 &&
-          newR < rows &&
-          newC >= 0 &&
-          newC < cols &&
-          grid[newR][newC] === '1' &&
-          !visited.has(key)
-        ) {
-          // Enqueue the neighbor for further exploration
-          queue.push([newR, newC])
-          // Mark the neighbor as visited
-          visited.add(key)
-        }
+          newR < 0 ||
+          newR >= rows ||
+          newC < 0 ||
+          newC >= cols ||
+          grid[newR][newC] !== '1' ||
+          visited.has(key)
+        )
+          continue
+
+        // Enqueue the neighbor for further exploration
+        queue.push([newR, newC])
+        // Mark the neighbor as visited
+        visited.add(key)
       }
     }
   }
