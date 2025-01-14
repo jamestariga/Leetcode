@@ -15,6 +15,7 @@ const deleteDuplicates = (head: ListNode | null): ListNode | null => {
     if (node.next !== null) {
       if (node.val === node.next.val) {
         node.next = node.next.next
+        continue
       }
     }
 
